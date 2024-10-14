@@ -184,3 +184,6 @@ $RECYCLE.BIN/
 
 # VScode trash
 .vscode/
+
+data/
+settings.yaml

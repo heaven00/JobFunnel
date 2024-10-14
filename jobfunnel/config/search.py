@@ -1,5 +1,4 @@
-"""Object to contain job query metadata
-"""
+"""Object to contain job query metadata"""
 
 from typing import List, Optional
 
@@ -54,7 +53,7 @@ class SearchConfig(BaseConfig):
         """
         super().__init__()
         self.province_or_state = province_or_state
-        self.city = city.lower() if city else None
+        self.city = city.lower() if city else ""
         self.radius = distance_radius or DEFAULT_SEARCH_RADIUS
         self.locale = locale
         self.providers = providers
@@ -80,7 +79,7 @@ class SearchConfig(BaseConfig):
     def validate(self):
         """We need to have the right information set, not mixing stuff"""
         assert self.province_or_state is not None, "Province/State not set"
-        assert self.city, "City not set"
+        # assert self.city, "City not set"
         assert self.locale, "Locale not set"
         assert self.providers and len(self.providers) >= 1, "Providers not set"
         assert self.keywords and len(self.keywords) >= 1, "Keywords not set"

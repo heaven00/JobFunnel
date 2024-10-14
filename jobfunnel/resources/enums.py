@@ -85,6 +85,8 @@ class Provider(Enum):
     INDEED = 1
     GLASSDOOR = 2
     MONSTER = 3
+    LINKEDIN = 4
+    ZIPRECRUITER = 5
 
 
 class DelayAlgorithm(Enum):
